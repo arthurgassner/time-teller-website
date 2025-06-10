@@ -1,0 +1,40 @@
+site_name: Literature Clock
+site_url: https://literature-clock.arthurgassner.ch/
+theme:
+  name: material
+  custom_dir: overrides # Needed for the google search metatag
+  icon:
+    logo: material/clock
+  favicon: assets/clock.svg
+  palette:
+    scheme: slate  # Options: default, slate, or custom
+    primary: red  # Primary color
+    accent: white     # Accent color
+plugins: [] # disable search
+nav:
+  - Home: index.md  
+  - How to build it: how_to_build_it.md  
+extra:
+  analytics:
+    provider: google
+    property: TODO
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://arthurgassner.ch
+    - icon: material/email
+      link: mailto:arth.gassner@gmail.com
+    - icon: fontawesome/brands/github 
+      link: https://github.com/arthurgassner/literature-clock-website
+    - icon: fontawesome/brands/github 
+      link: https://github.com/arthurgassner/literature-clock
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - md_in_html
+  - smarty
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - footnotes
