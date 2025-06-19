@@ -58,31 +58,48 @@ I can then figure out its local IP address with `sudo arp-scan --localnet`.
 
 ## Step 3: Display something on the screen
 
-I can now turn off the screen, and the RPi to the HAT, and HAT to the screen.
+I can now turn off the RPi, and hook the RPi to the HAT, and the HAT to the screen.
 
 <figure markdown="span">
   ![Image title](https://placehold.co/600x400){ width="100%" }
   <figcaption>Raspberry Pi Zero 2W, connected to our HAT, and HAT to the e-Paper screen.</figcaption>
 </figure>
 
-paper screens have partial refresh and full-refresh, explain it
-Python script printing the quote on the screen, using cron.
+Now e-ink technology is quite peculiar, in that it has a very high refresh time (~4s for our screen), and some several types of refresh, namely
+
+- **Full-refresh**: The entire screen is refreshed at once, quite noticabely.
+- **Partial-refresh**: Only a part of the screen is refreshed at once, discretely. The downside is that a part of the previous image is usually visible, leading to a "dirty-looking" screen after a while.
 
 <figure markdown="span">
   ![Image title](https://placehold.co/600x400){ width="100%" }
-  <figcaption>The quote actualizing.</figcaption>
+  <figcaption>Side-by-side .gif of the full-refresh and partial-refresh.</figcaption>
+</figure>
+
+After diving through [Waveshare's demo codes](https://github.com/waveshareteam/e-Paper), and struggling to figure out what code was actually needed, I managed to display something onto the screen. The fully-fledged Python code is available [here](TODO).
+
+<figure markdown="span">
+  ![Image title](https://placehold.co/600x400){ width="100%" }
+  <figcaption>A .gif of the e-ink screen displaying "something". The code is available [here](TODO/test_screen.py)</figcaption>
+</figure>
+
+Wonderful! I can now work my software magic and end up with a small Python script which fetches the time-accurate quote, builds a nice-looking image of it, and display it onto the screen. Using [`cron`](https://en.wikipedia.org/wiki/Cron), I can setup my RPi to run that script every minute, and _tada_! A clock!
+
+<figure markdown="span">
+  ![Image title](https://placehold.co/600x400){ width="100%" }
+  <figcaption>A .gif of the e-ink screen changing minute.</figcaption>
 </figure>
 
 ## Step 4: House the hardware properly
 
-solvespace to build some housing
+We now have a working clock -- yet fully naked on my desk.
+I turn to a 3D modelling software -- [solvespace](https://solvespace.com), as I am a Linux user -- to draw what I'd see as a nice-looking housing.
 
 <figure markdown="span">
   ![Image title](https://placehold.co/600x400){ width="100%" }
   <figcaption>Our 3D model, as seen in solvespace.</figcaption>
 </figure>
 
-print-as-a-service, ABS
+Not owning a 3D printer myself, I order the parts to be 3D-printed in ABS, and 10 days later -- here they are.
 
 <figure markdown="span">
   ![Image title](https://placehold.co/600x400){ width="100%" }
