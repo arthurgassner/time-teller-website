@@ -13,12 +13,17 @@ Cue to some building.
 ## Step 1: Gather the necessary parts
 
 First, I listed all things I'd expect to need -- naturally amending that list as I kept on building. Exhaustively:
-- **Waveshare's 7.5inch e-Paper screen**: Our screen.
-- **Raspberry Pi Zero 2W**: To drive our screen.
-- **Micro SD card**: To house the RPi's OS.
-- **Waveshare's 7.5inch e-Paper HAT**: To act as a bridge between our RPi and screen.
-- **USB cable Type C**: To power our RPi.
-- **A 3D-printed case**: To house everything.
+
+
+| Part                                      | Description                                        | Price [CHF] |
+| ----------------------------------------- | -------------------------------------------------- | ----------- |
+| **Waveshare's 7.5inch e-Paper screen**    | Our screen                                         |     60      |       
+| **Raspberry Pi Zero 2W**                  | To drive our screen.                               |     20      |       
+| **Micro SD card**                         | To house the RPi's OS.                             |     10      |       
+| **Waveshare's 7.5inch e-Paper HAT**       | To act as a bridge between our RPi and screen.     |     20      |       
+| **USB cable Type C**                      | To power our RPi.                                  |     10      |       
+| **3D-printed case**                       | To house everything.                               |     ~30     |       
+
 
 <figure markdown="span">
   ![Image title](https://placehold.co/600x400){ width="100%" }
