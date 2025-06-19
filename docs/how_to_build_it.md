@@ -2,11 +2,13 @@
 
 ## Introduction
 
-TODO: This idea was floating in my head for a while, I'd seen some approaches but thought I could build my own cool version.
+The idea of having a sentence-based clock had been floating around in my head for a while.[^1]
 
-Quickly stumbled upon GITHUB-SOURCE-WITH-THE-CSV and e-paper programmable screens. 
+[^1]: I assume I'd stumbled upon [one](https://literature-clock.jenevoldsen.com/) [of](https://www.authorclock.com/) [these](https://www.reddit.com/r/somethingimade/comments/xcbwpx/i_made_a_literary_quote_clock_out_of_an_old/) at some point.
 
-Cue some building.
+Eventually, I stumbled upon [this dataset](https://github.com/JohannesNE/literature-clock/blob/master/litclock_annotated.csv), and figured I'd build one.
+
+Cue to some building.
 
 <figure markdown="span">
   ![Image title](https://placehold.co/600x400){ width="100%" }
