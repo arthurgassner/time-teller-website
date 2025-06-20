@@ -38,7 +38,7 @@ I flashed it -- thereby installing Raspberry Pi OS (64bit), based on Debian -- b
     Make sure to flash your WiFi credentials and [SSH public key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) onto the board, allowing you to easily SSH into it later.
 
 <figure markdown="span">
-  ![Image title](assets/how_to_build_it/rpi-imager.png){ width="100%" }
+  ![Rpi Imager software](assets/how_to_build_it/rpi-imager.png){ width="100%" }
   <figcaption>Flashing the RaspberryPi Zero 2W.</figcaption>
 </figure>
 
@@ -46,14 +46,14 @@ Once flashed and booted, the newly-installed RPi will automatically connect to m
 I can then figure out its local IP address with `sudo arp-scan --localnet`.
 
 <figure markdown="span">
-  ![Image title](https://placehold.co/600x400){ width="100%" }
+  ![arp-scan showing the local IPs](assets/how_to_build_it/arp-scan.gif){ width="100%" }
   <figcaption>Attempting to SSH into each local addresses, till I find the RPi.</figcaption>
 </figure>
 
 ??? tip "Making the shell more pleasant"
     
     Whenever I install some Debian-based OS, I start by installing [`oh-my-zsh`](https://ohmyz.sh/) -- along with [`fzf`](https://github.com/junegunn/fzf), [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) and [`zsh-autocomplete`](https://github.com/marlonrichert/zsh-autocomplete) -- making the entire shell-based interaction much more pleasant.
-    
+
 ## Step 3: Display something on the screen
 
 I can now turn off the RPi, and hook the RPi to the HAT, and the HAT to the screen.
