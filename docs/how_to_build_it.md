@@ -42,10 +42,6 @@ I flashed it -- thereby installing Raspberry Pi OS (64bit), based on Debian -- b
   <figcaption>Flashing the RaspberryPi Zero 2W.</figcaption>
 </figure>
 
-??? tip "Making the shell more pleasant"
-    
-    Whenever I install some Debian-based OS, I start by installing [`oh-my-zsh`](https://ohmyz.sh/) -- along with [`fzf`](https://github.com/junegunn/fzf), [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) and [`zsh-autocomplete`](https://github.com/marlonrichert/zsh-autocomplete) -- making the entire shell-based interaction much more pleasant.
-
 Once flashed and booted, the newly-installed RPi will automatically connect to my WiFi.
 I can then figure out its local IP address with `sudo arp-scan --localnet`.
 
@@ -54,6 +50,10 @@ I can then figure out its local IP address with `sudo arp-scan --localnet`.
   <figcaption>Attempting to SSH into each local addresses, till I find the RPi.</figcaption>
 </figure>
 
+??? tip "Making the shell more pleasant"
+    
+    Whenever I install some Debian-based OS, I start by installing [`oh-my-zsh`](https://ohmyz.sh/) -- along with [`fzf`](https://github.com/junegunn/fzf), [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) and [`zsh-autocomplete`](https://github.com/marlonrichert/zsh-autocomplete) -- making the entire shell-based interaction much more pleasant.
+    
 ## Step 3: Display something on the screen
 
 I can now turn off the RPi, and hook the RPi to the HAT, and the HAT to the screen.
