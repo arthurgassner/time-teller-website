@@ -76,10 +76,10 @@ Let's write some code!
 
 Since the code we'll write will be running directly on our RPi, it's preferable to write -- and test it -- directly on our headless board. Luckily, VSCode -- and most IDEs -- [supports this by default](https://code.visualstudio.com/docs/remote/remote-overview), allowing me to edit on my computer the files on our RPi.
 
-After diving through [Waveshare's demo codes](https://github.com/waveshareteam/e-Paper) and [Waveshare's wiki](https://www.waveshare.com/wiki/7.5inch_e-Paper_HAT_Manual#Working_With_Raspberry_Pi), and struggling to figure out what code was actually needed, I managed to display something onto the screen. The fully-fledged Python code is available [here](https://github.com/arthurgassner/literature-clock/blob/main/hello_world.py).
+After diving through [Waveshare's demo codes](https://github.com/waveshareteam/e-Paper) and [Waveshare's wiki](https://www.waveshare.com/wiki/7.5inch_e-Paper_HAT_Manual#Working_With_Raspberry_Pi), and struggling to figure out what code was actually needed, I managed to display `Hello World` onto the screen. The fully-fledged Python code is available [here](https://github.com/arthurgassner/literature-clock/blob/main/hello_world.py).
 
 <figure markdown="span">
-  ![Displaying hello world on our screen.](assets/how_to_build_it/hello_world.gif){ width="100%" }
+  ![Displaying hello world on our screen.](assets/how_to_build_it/hello_world.png){ width="100%" }
   <figcaption>Displaying `Hello World` on our screen.</figcaption>
 </figure>
 
