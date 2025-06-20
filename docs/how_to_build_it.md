@@ -2,13 +2,11 @@
 
 ## Introduction
 
-The idea of having a sentence-based clock had been floating around in my head for a while.[^1]
-
-[^1]: I assume I'd stumbled upon [one](https://literature-clock.jenevoldsen.com/) [of](https://www.authorclock.com/) [these](https://www.reddit.com/r/somethingimade/comments/xcbwpx/i_made_a_literary_quote_clock_out_of_an_old/) at some point.
-
-Eventually, I stumbled upon [this dataset](https://github.com/JohannesNE/literature-clock/blob/master/litclock_annotated.csv), and figured I'd build one.
+The idea of having a sentence-based clock had been floating around in my head for a while.[^1] I eventually stumbled upon [this dataset](https://github.com/JohannesNE/literature-clock/blob/master/litclock_annotated.csv), and figured I'd build one.
 
 Cue to some building.
+
+[^1]: I assume I'd stumbled upon [one](https://literature-clock.jenevoldsen.com/) [of](https://www.authorclock.com/) [these](https://www.reddit.com/r/somethingimade/comments/xcbwpx/i_made_a_literary_quote_clock_out_of_an_old/) at some point.
 
 ## Step 1: Gather the necessary parts
 
@@ -40,7 +38,7 @@ I flashed it -- thereby installing Raspberry Pi OS (64bit), based on Debian -- b
     Make sure to flash your WiFi credentials and [SSH public key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) onto the board, allowing you to easily SSH into it later.
 
 <figure markdown="span">
-  ![Image title](https://placehold.co/600x400){ width="100%" }
+  ![Image title](assets/how_to_build_it/rpi-imager.png){ width="100%" }
   <figcaption>Flashing the RaspberryPi Zero 2W.</figcaption>
 </figure>
 
