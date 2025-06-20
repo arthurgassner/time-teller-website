@@ -56,15 +56,31 @@ Once I'm in, the first thing to do is to update its software with `sudo apt upda
     
     Whenever I install some Debian-based OS, I start by installing [`oh-my-zsh`](https://ohmyz.sh/) -- along with [`fzf`](https://github.com/junegunn/fzf), [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) and [`zsh-autosuggestions`](https://github.com/marlonrichert/zsh-autocomplete) -- making the entire shell-based interaction much more pleasant.
 
-Then, since the code we'll write will be running directly on our RPi, it's preferable to write -- and test it -- directly on our headless board. Luckily, VSCode -- and most IDEs -- [supports this by default](https://code.visualstudio.com/docs/remote/remote-overview), allowing me to edit on my computer the files on our RPi.
-
-## Step 3: Display something on the screen
-
 I can now turn off the RPi, and hook the RPi to the HAT, and the HAT to the screen.
 
 <figure markdown="span">
   ![Image title](https://placehold.co/600x400){ width="100%" }
   <figcaption>Raspberry Pi Zero 2W, connected to our HAT, and HAT to the e-Paper screen.</figcaption>
+</figure>
+
+Following [Waveshare's wiki](https://www.waveshare.com/wiki/7.5inch_e-Paper_HAT_Manual#Working_With_Raspberry_Pi), we need to enable our RPi's _Serial Peripheral Interface_ (SPI), so that it can talk to our HAT -- with `sudo raspi-config` > `Interface Options` > `SPI`.
+
+<figure markdown="span">
+  ![Enabling our RPi's SPI](assets/how_to_build_it/spi.png){ width="100%" }
+  <figcaption>Enable our RPI's SPI, so that it can talk to our HAT.</figcaption>
+</figure>
+
+## Step 3: Display something on the screen
+
+Let's write some code!
+
+Since the code we'll write will be running directly on our RPi, it's preferable to write -- and test it -- directly on our headless board. Luckily, VSCode -- and most IDEs -- [supports this by default](https://code.visualstudio.com/docs/remote/remote-overview), allowing me to edit on my computer the files on our RPi.
+
+After diving through [Waveshare's demo codes](https://github.com/waveshareteam/e-Paper) and [Waveshare's wiki](https://www.waveshare.com/wiki/7.5inch_e-Paper_HAT_Manual#Working_With_Raspberry_Pi), and struggling to figure out what code was actually needed, I managed to display something onto the screen. The fully-fledged Python code is available [here](https://github.com/arthurgassner/literature-clock/blob/main/hello_world.py).
+
+<figure markdown="span">
+  ![Displaying hello world on our screen.](assets/how_to_build_it/hello_world.gif){ width="100%" }
+  <figcaption>Displaying `Hello World` on our screen.</figcaption>
 </figure>
 
 Now e-ink technology is quite peculiar, in that it has a very high refresh time (~4s for our screen), and two types of refresh, namely
@@ -76,8 +92,6 @@ Now e-ink technology is quite peculiar, in that it has a very high refresh time 
   ![Image title](https://placehold.co/600x400){ width="100%" }
   <figcaption>Side-by-side .gif of the full-refresh and partial-refresh.</figcaption>
 </figure>
-
-After diving through [Waveshare's demo codes](https://github.com/waveshareteam/e-Paper), and struggling to figure out what code was actually needed, I managed to display something onto the screen. The fully-fledged Python code is available [here](TODO).
 
 <figure markdown="span">
   ![Image title](https://placehold.co/600x400){ width="100%" }
