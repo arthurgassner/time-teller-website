@@ -67,7 +67,7 @@ I can now turn off the RPi, and hook the RPi to the HAT, and the HAT to the scre
   <figcaption>Raspberry Pi Zero 2W, connected to our HAT, and HAT to the e-Paper screen.</figcaption>
 </figure>
 
-Now e-ink technology is quite peculiar, in that it has a very high refresh time (~4s for our screen), and some several types of refresh, namely
+Now e-ink technology is quite peculiar, in that it has a very high refresh time (~4s for our screen), and two types of refresh, namely
 
 - **Full-refresh**: The entire screen is refreshed at once, quite noticabely.
 - **Partial-refresh**: Only a part of the screen is refreshed at once, discretely. The downside is that a part of the previous image is usually visible, leading to a "dirty-looking" screen after a while.
