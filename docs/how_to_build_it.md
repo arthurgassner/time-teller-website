@@ -103,8 +103,8 @@ We now have a working clock -- yet fully naked on my desk.
 I turn to a 3D modelling software -- [solvespace](https://solvespace.com), as I am a Linux user -- to draw what I'd see as a nice-looking housing.
 
 <figure markdown="span">
-  ![Image title](https://placehold.co/600x400){ width="100%" }
-  <figcaption>Our 3D model, as seen in solvespace.</figcaption>
+  ![Solvespace](assets/how_to_build_it/solvespace.png){ width="100%" }
+  <figcaption>Our 3D model, as seen in <code>SolveSpace</code>.</figcaption>
 </figure>
 
 Not owning a 3D printer myself, I order the parts to be 3D-printed in ABS, and 10 days later -- here they are.
