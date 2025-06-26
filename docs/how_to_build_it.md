@@ -93,8 +93,8 @@ After diving through [Waveshare's demo codes](https://github.com/waveshareteam/e
 Wonderful! I can now work my software magic and end up with a small Python script which fetches the time-accurate quote, builds a nice-looking image of it, and display it onto the screen. Using [`cron`](https://en.wikipedia.org/wiki/Cron), I can setup my RPi to run that script every minute, and _tada_! A clock!
 
 <figure markdown="span">
-  ![Image title](https://placehold.co/600x400){ width="100%" }
-  <figcaption>A .gif of the e-ink screen changing minute.</figcaption>
+  ![Image title](assets/how_to_build_it/proof-of-concept.gif){ width="100%" }
+  <figcaption>The e-ink screen passing from 21:<b>17</b> to 21:<b>18</b>.</figcaption>
 </figure>
 
 ## Step 4: House the hardware properly
