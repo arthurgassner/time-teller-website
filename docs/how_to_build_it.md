@@ -76,27 +76,19 @@ Let's write some code!
 
 Since the code we'll write will be running directly on our RPi, it's preferable to write -- and test it -- directly on our headless board. Luckily, VSCode -- and most IDEs -- [supports this by default](https://code.visualstudio.com/docs/remote/remote-overview), allowing me to edit on my computer the files on our RPi.
 
-After diving through [Waveshare's demo codes](https://github.com/waveshareteam/e-Paper) and [Waveshare's wiki](https://www.waveshare.com/wiki/7.5inch_e-Paper_HAT_Manual#Working_With_Raspberry_Pi), and struggling to figure out what code was actually needed, I managed to display `Hello World` onto the screen. The fully-fledged Python code is available [here](https://github.com/arthurgassner/literature-clock/blob/main/hello_world.py).
-
-<figure markdown="span">
-  ![Displaying hello world on our screen.](assets/how_to_build_it/hello_world.png){ width="100%" }
-  <figcaption>Displaying `Hello World` on our screen.</figcaption>
-</figure>
 
 Now e-ink technology is quite peculiar, in that it has a very high refresh time (~4s for our screen), and two types of refresh, namely
 
-- **Full-refresh**: The entire screen is refreshed at once, quite noticabely.
+- **Full-refresh**: The entire screen is refreshed at once, quite noticeably.
 - **Partial-refresh**: Only a part of the screen is refreshed at once, discretely. The downside is that a part of the previous image is usually visible, leading to a "dirty-looking" screen after a while.
 
-<figure markdown="span">
-  ![Image title](https://placehold.co/600x400){ width="100%" }
-  <figcaption>Side-by-side .gif of the full-refresh and partial-refresh.</figcaption>
-</figure>
+After diving through [Waveshare's demo codes](https://github.com/waveshareteam/e-Paper) and [Waveshare's wiki](https://www.waveshare.com/wiki/7.5inch_e-Paper_HAT_Manual#Working_With_Raspberry_Pi), and struggling to figure out what code was actually needed, I managed to display `Hello World` onto the screen. The full Python code is available [here](https://github.com/arthurgassner/literature-clock/blob/main/hello_world.py).
 
 <figure markdown="span">
-  ![Image title](https://placehold.co/600x400){ width="100%" }
-  <figcaption>A .gif of the e-ink screen displaying "something". The code is available [here](TODO/test_screen.py)</figcaption>
+  ![Displaying hello world on our screen.](assets/how_to_build_it/hello_world.png){ width="100%" }
+  <figcaption>Displaying <code>Hello World</code> on our screen.</figcaption>
 </figure>
+
 
 Wonderful! I can now work my software magic and end up with a small Python script which fetches the time-accurate quote, builds a nice-looking image of it, and display it onto the screen. Using [`cron`](https://en.wikipedia.org/wiki/Cron), I can setup my RPi to run that script every minute, and _tada_! A clock!
 
