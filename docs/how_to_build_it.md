@@ -24,8 +24,8 @@ First, I listed all things I'd expect to need -- naturally amending that list as
 
 
 <figure markdown="span">
-  ![Image title](https://placehold.co/600x400){ width="100%" }
-  <figcaption>All required hardware.</figcaption>
+  ![Image title](assets/how_to_build_it/overview.jpg){ width="100%" }
+  <figcaption>Most of the required hardware.</figcaption>
 </figure>
 
 ## Step 2: Setup the RPi
@@ -59,7 +59,7 @@ Once I'm in, the first thing to do is to update its software with `sudo apt upda
 I can now turn off the RPi, and hook the RPi to the HAT, and the HAT to the screen.
 
 <figure markdown="span">
-  ![Image title](https://placehold.co/600x400){ width="100%" }
+  ![RPi, connected to the HAT, connected to the e-Paper screen](assets/how_to_build_it/rpi-hat-screen.jpg){ width="100%" }
   <figcaption>Raspberry Pi Zero 2W, connected to our HAT, and HAT to the e-Paper screen.</figcaption>
 </figure>
 
