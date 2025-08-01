@@ -76,6 +76,9 @@ Let's write some code!
 
 Since the code we'll write will be running directly on our RPi, it's preferable to write -- and test it -- directly on our headless board. Luckily, VSCode -- and most IDEs -- [supports this by default](https://code.visualstudio.com/docs/remote/remote-overview), allowing me to edit on my computer the files on our RPi.
 
+??? tip "Using git on a remote machine"
+  Since I'm versioning my code -- via git -- and hosting it on GitHub, I'd like to have an easy way of authentifying my remote machine -- i.e. my RPi.
+  [Deploy keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys) allow me to do just that, basically enabling my RPi to push/pull from my GitHub repo.
 
 Now e-ink technology is quite peculiar, in that it has a very high refresh time (~4s for our screen), and two types of refresh, namely
 
