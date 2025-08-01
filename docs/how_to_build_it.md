@@ -109,6 +109,26 @@ Wonderful! I can now work my software magic and end up with a small Python scrip
   <figcaption>The e-ink screen passing from 21:<b>17</b> to 21:<b>18</b>.</figcaption>
 </figure>
 
+But what happens if my RPi loses power?
+The RPi would shut down, and the currently-displayed quote would stay on the screen.
+However, upon powering it up, I'd have to wait for `cron` job to run again, i.e. up to a _whole_ minute.
+
+Instead, I want my script to run on startup. To do so, we'll use [`systemd`](https://systemd.io/), leading us to write [`literature-clock.service`](https://github.com/arthurgassner/literature-clock/blob/main/literature-clock.service).
+
+I can now register the new service, and enable it to run at boot.
+
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable literature-clock.service
+```
+
+??? tip "Test our `systemd` service"
+
+    - Ensure the service works with `sudo systemctl start literature-clock.service`
+    - Check the service's status with `systemctl status literature-clock.service`
+
+
 ## Step 4: House the hardware properly
 
 We now have a working clock -- yet fully naked on my desk.
