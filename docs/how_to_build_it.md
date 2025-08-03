@@ -101,7 +101,7 @@ Wonderful! I can now work my software magic and end up with a small Python scrip
     I can set it up by running `crontab -e`, and then adding the line
     
     ```bash
-    * * * * * cd /home/pi/literature-clock && uv run /home/pi/literature-clock/main.py
+    * * * * * cd /home/pi/literature-clock && /home/pi/literature-clock/.venv/bin/python /home/pi/literature-clock/main.py
     ```
 
 <figure markdown="span">
