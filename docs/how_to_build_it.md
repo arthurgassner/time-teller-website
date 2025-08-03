@@ -137,8 +137,8 @@ We now have a working clock -- yet fully naked on my desk.
 I turn to a 3D modelling software -- [solvespace](https://solvespace.com), as I am a Linux user -- to draw what I'd see as a nice-looking housing.
 
 <figure markdown="span">
-  ![Solvespace](assets/how_to_build_it/solvespace.png){ width="100%" }
-  <figcaption>Our 3D model, as seen in <code>SolveSpace</code>.</figcaption>
+  ![Pre-assembly clock](assets/how_to_build_it/solvespace.png){ width="100%" }
+  <figcaption>Our clock -- front and back -- as seen in Solvespace.</figcaption>
 </figure>
 
 After some 3D-printing, our parts are ready for assembly.
