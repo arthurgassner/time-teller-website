@@ -115,12 +115,12 @@ However, upon powering it up, I'd have to wait for `cron` job to run again, i.e.
 
 Instead, I want my script to run on startup. To do so, we'll use [`systemd`](https://systemd.io/), leading us to write [`literature-clock.service`](https://github.com/arthurgassner/literature-clock/blob/main/literature-clock.service).
 
-I can now register the new service, and enable it to run at boot.
-
+I place our newly-written `.service` file at `/etc/systemd/system/literature-clock.service`, register it, and, and enable it to run at boot.
 
 ```bash
-sudo systemctl daemon-reload
-sudo systemctl enable literature-clock.service
+sudo nano /etc/systemd/system/literature-clock.service # Write the .service 
+sudo systemctl daemon-reload # Register it
+sudo systemctl enable literature-clock.service # Enable it
 ```
 
 ??? tip "Test our `systemd` service"
