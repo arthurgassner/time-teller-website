@@ -143,7 +143,7 @@ I turn to a 3D modelling software -- [solvespace](https://solvespace.com), as I 
 
 After some 3D-printing, our parts are ready for assembly.
 
-!!! note "3D printing as a service"
+!!! note "3D printing as a service vs at home"
 
     At the start of this project, I didn't own a 3D printer, leading me to rely on print-as-a-service vendors.
     The lead time (typically 7-10 days) eventually led me to buy my own 3D printer, to be able to experiment faster.
