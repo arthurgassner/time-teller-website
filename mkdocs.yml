@@ -12,8 +12,7 @@ theme:
     accent: white     # Accent color
 plugins: [] # disable search
 nav:
-  - Home: index.md  
-  - How to build it: how_to_build_it.md  
+  - How to build it: index.md  
 extra:
   analytics:
     provider: google
