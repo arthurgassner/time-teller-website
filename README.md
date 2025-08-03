@@ -6,7 +6,7 @@ This repo contains the code for the _Literature Clock_'s website.
 
 It is built using Material for MkDocs. 
 
-![](https://placehold.co/600x400)
+<p align="center"><img src="docs/assets/how_to_build_it/lc-in-sita.jpg" width="60%"><p>
 
 
 > [!NOTE]  
