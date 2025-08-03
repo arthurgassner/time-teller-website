@@ -148,7 +148,8 @@ After some 3D-printing, our parts are ready for assembly.
     At the start of this project, I didn't own a 3D printer, leading me to rely on print-as-a-service vendors.
     The lead time (typically 7-10 days) eventually led me to buy my own 3D printer, to be able to experiment faster.
 
-We can insert the [threaded inserts](https://en.wikipedia.org/wiki/Threaded_insert) -- with a soldering iron -- and mount the female-USB-C-to-male-micro-USB port, and _tada!_, our clock is ready !
+
+After inserting the [threaded inserts](https://en.wikipedia.org/wiki/Threaded_insert) -- with a soldering iron -- and mounting the female-USB-C-to-male-micro-USB port, _tada!_, our clock is ready !
 
 <figure markdown="span">
   ![Pre-assembly clock](assets/how_to_build_it/preassembly_clock.jpg){ width="100%" }
