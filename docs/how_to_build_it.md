@@ -21,10 +21,12 @@ First, I listed all things I'd expect to need -- naturally amending that list as
 | **Waveshare's 7.5inch e-Paper HAT**       | To act as a bridge between our RPi and screen.     |     20      |       
 | **USB cable Type C**                      | To power our RPi.                                  |     10      |       
 | **3D-printed case**                       | To house everything.                               |     ~30     |       
+| **Threaded inserts & screws**             | To hold everything together.                       |     ~3     |       
+| **Female USB-C to Micro USB connector**   | To avoid using Micro USB.                          |     ~5     |       
 
 
 <figure markdown="span">
-  ![Image title](assets/how_to_build_it/overview.jpg){ width="100%" }
+  ![Required hardware](assets/how_to_build_it/overview.jpg){ width="100%" }
   <figcaption>Most of the required hardware.</figcaption>
 </figure>
 
@@ -105,7 +107,7 @@ Wonderful! I can now work my software magic and end up with a small Python scrip
     ```
 
 <figure markdown="span">
-  ![Image title](assets/how_to_build_it/proof-of-concept.gif){ width="100%" }
+  ![e-ink PoC](assets/how_to_build_it/proof-of-concept.gif){ width="100%" }
   <figcaption>The e-ink screen passing from 21:<b>17</b> to 21:<b>18</b>.</figcaption>
 </figure>
 
@@ -123,7 +125,7 @@ sudo systemctl daemon-reload # Register it
 sudo systemctl enable literature-clock.service # Enable it
 ```
 
-??? tip "Test our `systemd` service"
+??? tip "Test the `systemd` service"
 
     - Ensure the service works with `sudo systemctl start literature-clock.service`
     - Check the service's status with `systemctl status literature-clock.service`
@@ -139,30 +141,21 @@ I turn to a 3D modelling software -- [solvespace](https://solvespace.com), as I 
   <figcaption>Our 3D model, as seen in <code>SolveSpace</code>.</figcaption>
 </figure>
 
-Not owning a 3D printer myself, I order the parts to be 3D-printed in ABS, and 10 days later -- here they are.
+After some 3D-printing, our parts are ready for assembly.
+
+!!! note "3D printing as a service"
+
+    At the start of this project, I didn't own a 3D printer, leading me to rely on print-as-a-service vendors.
+    The lead time (typically 7-10 days) eventually led me to buy my own 3D printer, to be able to experiment faster.
+
+We can insert the [threaded inserts](https://en.wikipedia.org/wiki/Threaded_insert) -- with a soldering iron -- and mount the female-USB-C-to-male-micro-USB port, and _tada!_, our clock is ready !
 
 <figure markdown="span">
-  ![Image title](https://placehold.co/600x400){ width="100%" }
-  <figcaption>Our 3D printed ABS shape, received by mail.</figcaption>
+  ![Pre-assembly clock](assets/how_to_build_it/preassembly_clock.jpg){ width="100%" }
+  <figcaption>Our clock, just before the assembly.</figcaption>
 </figure>
 
-threaded inserts
-
 <figure markdown="span">
-  ![Image title](https://placehold.co/600x400){ width="100%" }
-  <figcaption>Inserting threaded inserts</figcaption>
-</figure>
-
-usb C 
-
-<figure markdown="span">
-  ![Image title](https://placehold.co/600x400){ width="100%" }
-  <figcaption>Mounting the USB-C female port onto the housing.</figcaption>
-</figure>
-
-assemble 
-
-<figure markdown="span">
-  ![Image title](https://placehold.co/600x400){ width="100%" }
+  ![Fully-assembled clock.](https://placehold.co/600x400){ width="100%" }
   <figcaption>Fully-assembled literature clock.</figcaption>
 </figure>
