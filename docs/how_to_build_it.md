@@ -159,6 +159,6 @@ After inserting the [threaded inserts](https://en.wikipedia.org/wiki/Threaded_in
 </figure>
 
 <figure markdown="span">
-  ![Fully-assembled clock.](https://placehold.co/600x400){ width="100%" }
+  ![Fully-assembled clock.](assets/how_to_build_it/assembled_clock.jpg){ width="100%" }
   <figcaption>Fully-assembled literature clock.</figcaption>
 </figure>
