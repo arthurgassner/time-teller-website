@@ -134,7 +134,9 @@ sudo systemctl enable literature-clock.service # Enable it
 ## Step 4: House the hardware properly
 
 We now have a working clock -- yet fully naked on my desk.
-I turn to a 3D modelling software -- [solvespace](https://solvespace.com), as I am a Linux user -- to draw what I'd see as a nice-looking housing.
+I turn to a 3D modelling software -- [solvespace](https://solvespace.com), as I am a Linux user -- to draw what I'd see as a nice-looking housing.[^2]
+
+[^2]: The 3d files can be found [here](https://github.com/arthurgassner/literature-clock/tree/main/3d-models)
 
 <figure markdown="span">
   ![Pre-assembly clock](assets/how_to_build_it/solvespace.png){ width="100%" }
