@@ -2,12 +2,11 @@
 
 <p align="center">🚀 <a href="https://time-teller.arthurgassner.ch"><strong>live website</strong></a> 🚀</p>
 
+<p align="center"><img src="docs/assets/how_to_build_it/lc-in-sita.jpg" width="60%"><p>
+
 This repo contains the code for the _Time Teller_'s website.
 
 It is built using Material for MkDocs. 
-
-<p align="center"><img src="docs/assets/how_to_build_it/lc-in-sita.jpg" width="60%"><p>
-
 
 > [!NOTE]  
 > The code for the software powering the screen can be found [here](https://github.com/arthurgassner/time-teller).
