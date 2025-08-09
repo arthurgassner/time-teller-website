@@ -1,11 +1,13 @@
 site_name: Time Teller
 site_url: https://time-teller.arthurgassner.ch/
 repo_url: https://github.com/arthurgasser/time-teller
+repo_name: time-teller
 theme:
   name: material
   custom_dir: overrides # Needed for the google search metatag
   icon:
     logo: material/clock
+    repo: fontawesome/brands/github
   favicon: assets/clock.svg
   palette:
     scheme: slate  # Options: default, slate, or custom
