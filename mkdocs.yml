@@ -1,5 +1,5 @@
-site_name: Literature Clock
-site_url: https://literature-clock.arthurgassner.ch/
+site_name: Time Teller
+site_url: https://time-teller.arthurgassner.ch/
 theme:
   name: material
   custom_dir: overrides # Needed for the google search metatag
@@ -23,9 +23,9 @@ extra:
     - icon: material/email
       link: mailto:arth.gassner@gmail.com
     - icon: fontawesome/brands/github 
-      link: https://github.com/arthurgassner/literature-clock-website
+      link: https://github.com/arthurgassner/time-teller-website
     - icon: fontawesome/brands/github 
-      link: https://github.com/arthurgassner/literature-clock
+      link: https://github.com/arthurgassner/time-teller
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:

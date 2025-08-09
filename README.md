@@ -1,8 +1,8 @@
-# literature-clock-website
+# :clock10: Time Teller's website
 
-<p align="center">🚀 <a href="https://literature-clock.arthurgassner.ch"><strong>live website</strong></a> 🚀</p>
+<p align="center">🚀 <a href="https://time-teller.arthurgassner.ch"><strong>live website</strong></a> 🚀</p>
 
-This repo contains the code for the _Literature Clock_'s website.
+This repo contains the code for the _Time Teller_'s website.
 
 It is built using Material for MkDocs. 
 
@@ -10,7 +10,7 @@ It is built using Material for MkDocs.
 
 
 > [!NOTE]  
-> The code for the software powering the screen can be found [here](https://github.com/arthurgassner/literature-clock).
+> The code for the software powering the screen can be found [here](https://github.com/arthurgassner/time-teller).
 
 ## How to install 
 

@@ -2,7 +2,7 @@
 
 <figure markdown="span">
   ![Fully-assembled clock.](assets/how_to_build_it/lc-in-sita.jpg){ width="80%" }
-  <figcaption>Fully-assembled literature clock.</figcaption>
+  <figcaption>Fully-assembled time teller.</figcaption>
 </figure>
 
 ## Introduction
@@ -93,7 +93,7 @@ Now e-ink technology is quite peculiar, in that it has a very high refresh time 
 - **Full-refresh**: The entire screen is refreshed at once, quite noticeably.
 - **Partial-refresh**: Only a part of the screen is refreshed at once, discretely. The downside is that a part of the previous image is usually visible, leading to a "dirty-looking" screen after a while.
 
-After diving through [Waveshare's demo codes](https://github.com/waveshareteam/e-Paper) and [Waveshare's wiki](https://www.waveshare.com/wiki/7.5inch_e-Paper_HAT_Manual#Working_With_Raspberry_Pi), and struggling to figure out what code was actually needed, I managed to display `Hello World` onto the screen. The full Python code is available [here](https://github.com/arthurgassner/literature-clock/blob/main/hello_world.py).
+After diving through [Waveshare's demo codes](https://github.com/waveshareteam/e-Paper) and [Waveshare's wiki](https://www.waveshare.com/wiki/7.5inch_e-Paper_HAT_Manual#Working_With_Raspberry_Pi), and struggling to figure out what code was actually needed, I managed to display `Hello World` onto the screen. The full Python code is available [here](https://github.com/arthurgassner/time-teller/blob/main/hello_world.py).
 
 <figure markdown="span">
   ![Displaying hello world on our screen.](assets/how_to_build_it/hello_world.png){ width="100%" }
@@ -108,7 +108,7 @@ Wonderful! I can now work my software magic and end up with a small Python scrip
     I can set it up by running `crontab -e`, and then adding the line
     
     ```bash
-    * * * * * cd /home/pi/literature-clock && /home/pi/literature-clock/.venv/bin/python /home/pi/literature-clock/main.py
+    * * * * * cd /home/pi/time-teller && /home/pi/time-teller/.venv/bin/python /home/pi/time-teller/main.py
     ```
 
 <figure markdown="span">
@@ -120,20 +120,20 @@ But what happens if my RPi loses power?
 The RPi would shut down, and the currently-displayed quote would stay on the screen.
 However, upon powering it up, I'd have to wait for `cron` job to run again, i.e. up to a _whole_ minute.
 
-Instead, I want my script to run on startup. To do so, we'll use [`systemd`](https://systemd.io/), leading us to write [`literature-clock.service`](https://github.com/arthurgassner/literature-clock/blob/main/literature-clock.service).
+Instead, I want my script to run on startup. To do so, we'll use [`systemd`](https://systemd.io/), leading us to write [`time-teller.service`](https://github.com/arthurgassner/time-teller/blob/main/time-teller.service).
 
-I place our newly-written `.service` file at `/etc/systemd/system/literature-clock.service`, register it, and, and enable it to run at boot.
+I place our newly-written `.service` file at `/etc/systemd/system/time-teller.service`, register it, and, and enable it to run at boot.
 
 ```bash
-sudo nano /etc/systemd/system/literature-clock.service # Write the .service 
+sudo nano /etc/systemd/system/time-teller.service # Write the .service 
 sudo systemctl daemon-reload # Register it
-sudo systemctl enable literature-clock.service # Enable it
+sudo systemctl enable time-teller.service # Enable it
 ```
 
 ??? tip "Test the `systemd` service"
 
-    - Ensure the service works with `sudo systemctl start literature-clock.service`
-    - Check the service's status with `systemctl status literature-clock.service`
+    - Ensure the service works with `sudo systemctl start time-teller.service`
+    - Check the service's status with `systemctl status time-teller.service`
 
 
 ## Step 4: House the hardware properly
@@ -141,7 +141,7 @@ sudo systemctl enable literature-clock.service # Enable it
 We now have a working clock -- yet fully naked on my desk.
 I turn to a 3D modelling software -- [solvespace](https://solvespace.com), as I am a Linux user -- to draw what I'd see as a nice-looking housing.[^2]
 
-[^2]: The 3d files can be found [here](https://github.com/arthurgassner/literature-clock/tree/main/3d-models)
+[^2]: The 3d files can be found [here](https://github.com/arthurgassner/time-teller/tree/main/3d-models)
 
 <figure markdown="span">
   ![Pre-assembly clock](assets/how_to_build_it/solvespace.png){ width="100%" }
@@ -165,5 +165,5 @@ After inserting the [threaded inserts](https://en.wikipedia.org/wiki/Threaded_in
 
 <figure markdown="span">
   ![Fully-assembled clock.](assets/how_to_build_it/assembled_clock.jpg){ width="100%" }
-  <figcaption>Fully-assembled literature clock.</figcaption>
+  <figcaption>Fully-assembled time teller.</figcaption>
 </figure>
