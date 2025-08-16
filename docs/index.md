@@ -120,6 +120,14 @@ But what happens if my RPi loses power?
 The RPi would shut down, and the currently-displayed quote would stay on the screen.
 However, upon powering it up, I'd have to wait for `cron` job to run again, i.e. up to a _whole_ minute.
 
+!!! note "When is now?"
+
+    The RPi Zero 2W does not contain a _Real Time Clock_ (RTC) module, relying instead on its internet connection to figure out the current time. As such, it does not see time passing when turned off.
+
+    In my use case, as it'll be in my home, where it has WiFi, this is not an issue.
+
+    If it were, a solution would be to add an RTC module (like [this one](https://www.waveshare.com/rtc-watchdog-hat.htm)).
+
 Instead, I want my script to run on startup. To do so, we'll use [`systemd`](https://systemd.io/), leading us to write [`time-teller.service`](https://github.com/arthurgassner/time-teller/blob/main/time-teller.service).
 
 I place our newly-written `.service` file at `/etc/systemd/system/time-teller.service`, register it, and, and enable it to run at boot.
