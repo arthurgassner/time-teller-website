@@ -8,7 +8,7 @@ theme:
   icon:
     logo: material/clock
     repo: fontawesome/brands/github
-  favicon: assets/clock.svg
+  favicon: assets/favicon.ico
   palette:
     scheme: slate  # Options: default, slate, or custom
     primary: red  # Primary color
