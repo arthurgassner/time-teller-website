@@ -18,17 +18,19 @@ Cue to some building.
 First, I listed all things I'd expect to need -- naturally amending that list as I kept on building. Exhaustively:
 
 
-| Part                                      | Description                                        | Price [CHF] |
-| ----------------------------------------- | -------------------------------------------------- | ----------- |
-| **Waveshare's 7.5inch e-Paper screen**    | Our screen                                         |     60      |       
-| **Raspberry Pi Zero 2W**                  | To drive our screen.                               |     20      |       
-| **Micro SD card**                         | To house the RPi's OS.                             |     10      |       
-| **Waveshare's 7.5inch e-Paper HAT**       | To act as a bridge between our RPi and screen.     |     20      |       
-| **USB cable Type C**                      | To power our RPi.                                  |     10      |       
-| **3D-printed case**                       | To house everything.                               |     ~30     |       
-| **Threaded inserts & screws**             | To hold everything together.                       |     ~3     |       
-| **Female USB-C to Micro USB connector**   | To avoid using Micro USB.                          |     ~5     |       
+| Part                                      | Description                                        | Price [CHF]   |
+| ----------------------------------------- | -------------------------------------------------- | ------------- |
+| **Waveshare's 7.5inch e-Paper screen**    | Our screen                                         |     60        |       
+| **Raspberry Pi Zero 2W**                  | To drive our screen.                               |     20        |       
+| **Micro SD card**                         | To house the RPi's OS.                             |     10        |       
+| **Waveshare's 7.5inch e-Paper HAT**       | To act as a bridge between our RPi and screen.     |     20        |       
+| **USB cable Type C**                      | To power our RPi.                                  |     10        |       
+| **3D-printed case**                       | To house everything.                               |    5 - 30[^2]     |       
+| **Threaded inserts & screws**             | To hold everything together.                       |     ~3        |       
+| **Female USB-C to Micro USB connector**   | To avoid using Micro USB.                          |     ~5        |       
 
+
+[^2]: The price of the 3D-printed case will depend on whether you're printing it yourself (~5CHF), or using a 3D-printing service.
 
 <figure markdown="span">
   ![Required hardware](assets/how_to_build_it/overview.jpg){ width="100%" }
@@ -147,9 +149,9 @@ sudo systemctl enable time-teller.service # Enable it
 ## Step 4: House the hardware properly
 
 We now have a working clock -- yet fully naked on my desk.
-I turn to a 3D modelling software -- [solvespace](https://solvespace.com), as I am a Linux user -- to draw what I'd see as a nice-looking housing.[^2]
+I turn to a 3D modelling software -- [solvespace](https://solvespace.com), as I am a Linux user -- to draw what I'd see as a nice-looking housing.[^3]
 
-[^2]: The 3d files can be found [here](https://github.com/arthurgassner/time-teller/tree/main/3d-models)
+[^3]: The 3d files can be found [here](https://github.com/arthurgassner/time-teller/tree/main/3d-models)
 
 <figure markdown="span">
   ![Pre-assembly clock](assets/how_to_build_it/solvespace.png){ width="100%" }
