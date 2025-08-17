@@ -25,12 +25,12 @@ First, I listed all things I'd expect to need -- naturally amending that list as
 | **Micro SD card**                         | To house the RPi's OS.                             |     10        |       
 | **Waveshare's 7.5inch e-Paper HAT**       | To act as a bridge between our RPi and screen.     |     20        |       
 | **USB cable Type C**                      | To power our RPi.                                  |     10        |       
-| **3D-printed case**                       | To house everything.                               |    5 - 30[^2]     |       
+| **3D-printed case**                       | To house everything.                               |    5 - 30[^2] |       
 | **Threaded inserts & screws**             | To hold everything together.                       |     ~3        |       
-| **Female USB-C to Micro USB connector**   | To avoid using Micro USB.                          |     ~5        |       
+| **Female USB-C to Micro USB connector**   | To avoid using Micro USB.                          |     ~5        |     
 
 
-[^2]: The price of the 3D-printed case will depend on whether you're printing it yourself (~5CHF), or using a 3D-printing service.
+[^2]: The price of the 3D-printed case will depend on whether you're printing it yourself (~5CHF), or using a 3D-printing service (~30CHF).
 
 <figure markdown="span">
   ![Required hardware](assets/how_to_build_it/overview.jpg){ width="100%" }
@@ -124,11 +124,29 @@ However, upon powering it up, I'd have to wait for `cron` job to run again, i.e.
 
 !!! note "When is now?"
 
-    The RPi Zero 2W does not contain a _Real Time Clock_ (RTC) module, relying instead on its internet connection to figure out the current time. As such, it does not see time passing when turned off.
+    The RPi Zero 2W does not contain a **_Real Time Clock (RTC)_** module. Hence, time stand stills when it is turned off.
+    Instead, it relies on its internet connection to figure out the current time. 
 
-    In my use case, as it'll be in my home, where it has WiFi, this is not an issue.
+    A way to address this would be to add an RTC module (like [this one](https://www.waveshare.com/rtc-watchdog-hat.htm), or [this one](https://www.pisugar.com/products/pisugar-3-raspberry-pi-zero-battery)).
 
-    If it were, a solution would be to add an RTC module (like [this one](https://www.waveshare.com/rtc-watchdog-hat.htm)).
+    In my use case, as it'll be mostly in my home, where it has WiFi, this is not an issue.
+    Still, in case I am ever away, I will connect it to my phone's hotspot[^3], and instruct it to prefer other connections over it.
+
+    ```bash
+    sudo nmcli device wifi rescan # Update the list of "seen" WiFi networks
+    nmcli device wifi list # List all "seen" WiFi networks, to ensure our hotspot is seen. 
+    sudo nmcli device wifi connect "HOTSPOT-SSID" password "HOTSPOT-PASSWORD" # Connect to our hotspot
+
+    # Normally, you've just broken your SSH connection, 
+    # as you've instructed the board to hop onto another network. 
+    # Shut down your hotspot, and SSH back into the board.
+
+    # Tell the board to favor other connections over the hotspot
+    sudo nmcli connection modify "HOTSPOT-SSID" connection.autoconnect-priority -10 
+    ```
+
+[^3]: Make sure you're hotspotting 2.4GHz WiFi, as that's the only kind seen by the RPi Zero 2W.
+
 
 Instead, I want my script to run on startup. To do so, we'll use [`systemd`](https://systemd.io/), leading us to write [`time-teller.service`](https://github.com/arthurgassner/time-teller/blob/main/time-teller.service).
 
@@ -149,9 +167,9 @@ sudo systemctl enable time-teller.service # Enable it
 ## Step 4: House the hardware properly
 
 We now have a working clock -- yet fully naked on my desk.
-I turn to a 3D modelling software -- [solvespace](https://solvespace.com), as I am a Linux user -- to draw what I'd see as a nice-looking housing.[^3]
+I turn to a 3D modelling software -- [solvespace](https://solvespace.com), as I am a Linux user -- to draw what I'd see as a nice-looking housing.[^4]
 
-[^3]: The 3d files can be found [here](https://github.com/arthurgassner/time-teller/tree/main/3d-models)
+[^4]: The 3d files can be found [here](https://github.com/arthurgassner/time-teller/tree/main/3d-models).
 
 <figure markdown="span">
   ![Pre-assembly clock](assets/how_to_build_it/solvespace.png){ width="100%" }
