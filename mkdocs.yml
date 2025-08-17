@@ -19,7 +19,7 @@ nav:
 extra:
   analytics:
     provider: google
-    property: TODO
+    property: G-GGE35FFPNQ
   social:
     - icon: fontawesome/solid/globe
       link: https://arthurgassner.ch
